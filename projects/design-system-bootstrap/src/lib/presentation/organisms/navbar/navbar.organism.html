@@ -1,0 +1,15 @@
+@if(navbarConfig){
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <div class="d-flex align-items-center me-md-auto text-dark text-decoration-none" >
+            <h3>
+                <dsb-icon-atom 
+                    [icon]="navbarConfig.iconConfig.icon" 
+                    [size]="navbarConfig.iconConfig.size" >
+                </dsb-icon-atom>
+                {{ navbarConfig.title }}
+            </h3>
+        </div>
+
+        <dsb-nav-link-molecule [navLinks]="navbarConfig.navLinks" ></dsb-nav-link-molecule>
+    </header>
+}

@@ -1,0 +1,53 @@
+<dsb-container-atom title="Button Group">
+    <dsb-button-group-molecule 
+        [buttonsGroupData]="buttonsGroupData" 
+        (clicker)="onClick($event)">
+    </dsb-button-group-molecule>
+</dsb-container-atom>
+
+<dsb-container-atom title="Nav Link">
+    <dsb-nav-link-molecule [navLinks]="navLinks">
+    </dsb-nav-link-molecule>
+</dsb-container-atom>
+
+<dsb-container-atom title="Form Field">
+    <section class="row g-4">
+        <div class="col-md-4">
+            <h6 class="text-secondary fw-semibold mb-2">Estado Normal (con Helper Text)</h6>
+            <dsb-form-field-molecule
+                [config]="formFieldNormal"
+                (valueChange)="onFormFieldChange($event)">
+            </dsb-form-field-molecule>
+        </div>
+        <div class="col-md-4">
+            <h6 class="text-secondary fw-semibold mb-2">Estado con Error</h6>
+            <dsb-form-field-molecule
+                [config]="formFieldError"
+                (valueChange)="onFormFieldChange($event)">
+            </dsb-form-field-molecule>
+        </div>
+        <div class="col-md-4">
+            <h6 class="text-secondary fw-semibold mb-2">Estado Deshabilitado</h6>
+            <dsb-form-field-molecule
+                [config]="formFieldDisabled">
+            </dsb-form-field-molecule>
+        </div>
+    </section>
+    @if (lastFormFieldValue) {
+        <div class="alert alert-info mt-3 py-2 px-3 small">
+            <strong>Valor recibido de FormFieldMolecule:</strong> {{ lastFormFieldValue }}
+        </div>
+    }
+</dsb-container-atom>
+
+<dsb-container-atom title="User Info">
+    <section class="row g-3">
+        @for(user of userList; track user.name){
+            <div class="col-md-4">
+                <div class="p-3 border rounded-3 bg-white shadow-sm h-100">
+                    <dsb-user-info-molecule [config]="user"></dsb-user-info-molecule>
+                </div>
+            </div>
+        }
+    </section>
+</dsb-container-atom>
