@@ -1,28 +1,87 @@
-<dsb-container-atom title="Icon" >
-    <section class="d-flex gap-5" >
+<dsb-container-atom title="Icon">
+    <section class="d-flex gap-5">
         @for(icon of icons; track icon){
             <dsb-icon-atom [icon]="icon.name" [size]="icon.size"></dsb-icon-atom>
         }
     </section>
 </dsb-container-atom>
 
-<dsb-container-atom title="Badge" >
-    <section class="d-flex gap-2" >
+<dsb-container-atom title="Badge">
+    <section class="d-flex gap-2 flex-wrap">
         @for(badge of badges; track badge){
-            <dsb-badge-atom [text]="badge.type | titlecase" [type]="badge.type" [typeText]="badge.typeText" ></dsb-badge-atom>
+            <dsb-badge-atom [text]="badge.type | titlecase" [type]="badge.type" [typeText]="badge.typeText"></dsb-badge-atom>
         }
     </section>
 </dsb-container-atom>
 
-<dsb-container-atom title="Button" >
-    <section class="d-flex gap-2" >
+<dsb-container-atom title="Button">
+    <section class="d-flex gap-2 flex-wrap">
         @for(button of buttons; track button){
             <dsb-button-atom 
                 [idButton]="button.idButton" 
                 [text]="button.type | titlecase" 
                 [type]="button.type" 
-                (clicker)="onClick($event)" >
+                (clicker)="onClick($event)">
             </dsb-button-atom>
         }
     </section>
+</dsb-container-atom>
+
+<dsb-container-atom title="Input">
+    <section class="row g-3">
+        @for(item of inputs; track item.id){
+            <div class="col-md-6 col-lg-4">
+                <label [for]="item.id" class="form-label small text-muted text-uppercase fw-semibold">
+                    {{ item.type | titlecase }} {{ item.disabled ? '(Deshabilitado)' : '' }}
+                </label>
+                <dsb-input-atom
+                    [idInput]="item.id"
+                    [type]="item.type"
+                    [placeholder]="item.placeholder"
+                    [value]="item.value"
+                    [disabled]="item.disabled ?? false"
+                    (valueChange)="onInputChange($event)">
+                </dsb-input-atom>
+            </div>
+        }
+    </section>
+    @if (lastInputValue) {
+        <div class="alert alert-info mt-3 py-2 px-3 small">
+            <strong>Último valor emitido:</strong> {{ lastInputValue }}
+        </div>
+    }
+</dsb-container-atom>
+
+<dsb-container-atom title="Avatar">
+    <div class="mb-4">
+        <h6 class="text-secondary fw-semibold mb-3">Con Fotografía de Perfil (Diferentes Tamaños)</h6>
+        <section class="d-flex align-items-center gap-4">
+            @for(avatar of avatarsWithImage; track avatar.initials){
+                <div class="d-flex flex-column align-items-center gap-1">
+                    <dsb-avatar-atom
+                        [imageUrl]="avatar.imageUrl"
+                        [initials]="avatar.initials"
+                        [size]="avatar.size">
+                    </dsb-avatar-atom>
+                    <span class="small text-muted">{{ avatar.size }}rem</span>
+                </div>
+            }
+        </section>
+    </div>
+
+    <div>
+        <h6 class="text-secondary fw-semibold mb-3">Con Iniciales de Respaldo y Temas Visuales</h6>
+        <section class="d-flex align-items-center gap-3 flex-wrap">
+            @for(avatar of avatarsWithInitials; track avatar.initials){
+                <div class="d-flex flex-column align-items-center gap-1">
+                    <dsb-avatar-atom
+                        [initials]="avatar.initials"
+                        [theme]="avatar.theme"
+                        [size]="avatar.size">
+                    </dsb-avatar-atom>
+                    <span class="badge bg-light text-dark border small">{{ avatar.theme }}</span>
+                </div>
+            }
+        </section>
+    </div>
 </dsb-container-atom>
