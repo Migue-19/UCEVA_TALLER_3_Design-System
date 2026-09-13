@@ -67,8 +67,8 @@ export class Atoms {
 
   avatarsWithImage: { imageUrl: string; initials: string; size: number }[] = [
     { imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150', initials: 'CM', size: 2.5 },
-    { imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150', initials: 'JA', size: 3.5 },
-    { imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150', initials: 'VR', size: 4.5 },
+    { imageUrl: 'https://media.licdn.com/dms/image/v2/D4E03AQFZLQqx8rbCGQ/profile-displayphoto-shrink_400_400/B4EZQQHgvqGcAg-/0/1735437193239?e=1790812800&v=beta&t=QnpGOEHDBf6e--fFzuq_buT2nGsry07YfXk4ukULrv4', initials: 'JA', size: 3.5 },
+    { imageUrl: 'https://media.licdn.com/dms/image/v2/D4E03AQEkjURV88_Fcg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1722894589138?e=2147483647&v=beta&t=3zIUCptH6t1KqkExZREhXA0uoahxVsoPeRI7MlWHuTI', initials: 'VR', size: 4.5 },
   ];
 
   avatarsWithInitials: { initials: string; theme: Themes; size: number }[] = [

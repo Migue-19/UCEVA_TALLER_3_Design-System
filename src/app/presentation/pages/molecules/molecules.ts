@@ -71,22 +71,23 @@ export class Molecules {
 
   userList: UserInfoConfig[] = [
     {
-      name: 'Carolina Morales',
-      imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150',
-      initials: 'CM',
-      role: 'Administradora del Sistema',
+      name: 'jesus david mejia vergara',
+      imageUrl: 'https://media.licdn.com/dms/image/v2/D4E03AQEkjURV88_Fcg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1722894589138?e=2147483647&v=beta&t=3zIUCptH6t1KqkExZREhXA0uoahxVsoPeRI7MlWHuTI',
+      initials: 'JD',
+      role: 'Administrador del Sistema',
       roleTheme: 'primary',
     },
     {
-      name: 'Miguel Ángel Ruiz',
+      name: 'Miguel Ángel Ruiz urmendis',
       initials: 'MR',
+      imageUrl: 'https://media.licdn.com/dms/image/v2/D4E03AQFZLQqx8rbCGQ/profile-displayphoto-shrink_400_400/B4EZQQHgvqGcAg-/0/1735437193239?e=1790812800&v=beta&t=QnpGOEHDBf6e--fFzuq_buT2nGsry07YfXk4ukULrv4',
       role: 'Desarrollador Frontend',
       roleTheme: 'success',
     },
     {
-      name: 'Valentina Restrepo',
-      initials: 'VR',
-      role: 'Diseñadora UI/UX',
+      name: 'Jolmer alexander viedma agudelo',
+      initials: 'JA',
+      role: 'Diseñador UI/UX',
       roleTheme: 'warning',
     },
   ];
