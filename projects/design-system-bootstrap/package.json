@@ -1,0 +1,25 @@
+{
+  "name": "@brejcha13320/design-system-bootstrap",
+  "version": "1.0.2",
+  "description": "Uceva Software Arquitecture - Atomic Design for Angular",
+  "peerDependencies": {
+    "@angular/common": "20.3.14",
+    "@angular/core": "20.3.14",
+    "bootstrap": "5.3.8",
+    "bootstrap-icons": "1.13.1"
+  },
+  "dependencies": {
+    "tslib": "2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Brejcha13320/Uceva-Angular-Taller-Design-System"
+  },
+  "keywords": [
+    "angular",
+    "design-system",
+    "components",
+    "atomic-design"
+  ],
+  "sideEffects": false
+}
