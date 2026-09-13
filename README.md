@@ -112,3 +112,18 @@ src/app/atoms/button/
 - En este taller se utilizan componentes standalone
 - Mantener una estructura clara favorece la escalabilidad y mantenibilidad
 - Revisar cobertura de pruebas unitarias y documentación
+
+## 🏛️ Sistema de Diseño Implementado (Atomic Design)
+
+Se implementó un mini sistema de diseño funcional en la librería interna `@brejcha13320/design-system-bootstrap` respetando la jerarquía de Atomic Design y documentado con comentarios JSDoc al 100% de cobertura en Compodoc:
+
+### ⚛️ Átomos
+- **`InputAtom` (`<dsb-input-atom>`)**: Campo de entrada versátil (`text`, `email`, `password`, `number`), con enlace de atributos, estado `disabled`, clase Bootstrap `form-control` y emisión de eventos `valueChange`.
+- **`AvatarAtom` (`<dsb-avatar-atom>`)**: Visualizador de imagen de usuario o iniciales circulares dinámicas con clases de fondo `bg-{theme}` y contraste adaptativo de texto.
+
+### 🧬 Moléculas
+- **`FormFieldMolecule` (`<dsb-form-field-molecule>`)**: Composición de `<label>`, `InputAtom` y mensajes contextuales de ayuda o error con estados reactivos.
+- **`UserInfoMolecule` (`<dsb-user-info-molecule>`)**: Composición de `AvatarAtom`, nombre del usuario y `BadgeAtom` con tematización visual de rol.
+
+### 🏢 Organismos
+- **`UserProfileCardOrganism` (`<dsb-user-profile-card-organism>`)**: Tarjeta interactiva y editable que compone `UserInfoMolecule` en la cabecera, `FormFieldMolecule` en el cuerpo y `ButtonGroupMolecule` en el pie para acciones funcionales de guardar (`save`) y cancelar (`cancel`).
