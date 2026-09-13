@@ -1,0 +1,7 @@
+<ul class="nav nav-pills">
+    @for(navLink of navLinks; track navLink){
+        <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="navLink.url" >{{ navLink.text }}</a>
+        </li>
+    }
+</ul>

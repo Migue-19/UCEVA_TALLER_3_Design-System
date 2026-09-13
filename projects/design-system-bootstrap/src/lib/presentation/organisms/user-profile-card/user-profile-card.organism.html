@@ -1,0 +1,22 @@
+@if (config) {
+  <div class="card shadow-sm border rounded-3 overflow-hidden dsb-user-profile-card">
+    <div class="card-header bg-light bg-gradient border-bottom py-3 px-4">
+      <dsb-user-info-molecule [config]="config.userInfo"></dsb-user-info-molecule>
+    </div>
+    <div class="card-body p-4">
+      <h6 class="text-secondary fw-semibold text-uppercase small mb-3">
+        Información de Contacto
+      </h6>
+      <dsb-form-field-molecule
+        [config]="config.emailField"
+        (valueChange)="onEmailChange($event)">
+      </dsb-form-field-molecule>
+    </div>
+    <div class="card-footer bg-white border-top py-3 px-4 d-flex justify-content-end">
+      <dsb-button-group-molecule
+        [buttonsGroupData]="config.actions"
+        (clicker)="onActionClick($event)">
+      </dsb-button-group-molecule>
+    </div>
+  </div>
+}
