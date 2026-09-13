@@ -4,12 +4,13 @@
 
 //Interfaces
 export * from './lib/core/interfaces/core.interface';
-export {
+export type {
   InputType,
   FormFieldConfig,
   UserInfoConfig,
   UserProfileCardConfig
 } from './lib/core/interfaces/core.interface';
+
 
 //Atoms
 export { IconAtom } from './lib/presentation/atoms/icon/icon.atom';
