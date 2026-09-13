@@ -27,4 +27,6 @@ export { FormFieldMolecule } from './lib/presentation/molecules/form-field/form-
 export { UserInfoMolecule } from './lib/presentation/molecules/user-info/user-info.molecule';
 
 //Organisms
-export { NavbarOrganism } from './lib/presentation/organisms/navbar/navbar.organism';
+export { NavbarOrganism } from './lib/presentation/organisms/navbar/navbar.organism';
+export { UserProfileCardOrganism } from './lib/presentation/organisms/user-profile-card/user-profile-card.organism';
+
