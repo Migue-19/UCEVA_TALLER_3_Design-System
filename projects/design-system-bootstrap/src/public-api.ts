@@ -23,6 +23,8 @@ export { AvatarAtom } from './lib/presentation/atoms/avatar/avatar.atom';
 //Molecules
 export { NavLinkMolecule } from './lib/presentation/molecules/nav-link/nav-link.molecule';
 export { ButtonGroupMolecule } from './lib/presentation/molecules/button-group/button-group.molecule';
+export { FormFieldMolecule } from './lib/presentation/molecules/form-field/form-field.molecule';
+export { UserInfoMolecule } from './lib/presentation/molecules/user-info/user-info.molecule';
 
 //Organisms
-export { NavbarOrganism } from './lib/presentation/organisms/navbar/navbar.organism';
+export { NavbarOrganism } from './lib/presentation/organisms/navbar/navbar.organism';

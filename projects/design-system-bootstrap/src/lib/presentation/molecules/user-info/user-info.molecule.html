@@ -1,0 +1,20 @@
+@if (config) {
+  <div class="d-flex align-items-center gap-3">
+    <dsb-avatar-atom
+      [imageUrl]="config.imageUrl"
+      [initials]="config.initials"
+      [size]="3"
+      [theme]="'primary'">
+    </dsb-avatar-atom>
+    <div class="d-flex flex-column">
+      <span class="fw-bold text-dark fs-6 dsb-user-name">{{ config.name }}</span>
+      <div class="mt-1">
+        <dsb-badge-atom
+          [text]="config.role"
+          [type]="config.roleTheme"
+          [typeText]="getBadgeTextClass()">
+        </dsb-badge-atom>
+      </div>
+    </div>
+  </div>
+}

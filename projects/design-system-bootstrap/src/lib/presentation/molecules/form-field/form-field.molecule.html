@@ -1,0 +1,24 @@
+<div class="mb-3">
+  @if (config) {
+    <label [for]="config.idInput" class="form-label fw-medium text-dark">
+      {{ config.label }}
+    </label>
+    <dsb-input-atom
+      [idInput]="config.idInput"
+      [type]="config.type"
+      [placeholder]="config.placeholder"
+      [value]="config.value ?? ''"
+      [disabled]="config.disabled ?? false"
+      (valueChange)="onValueChange($event)">
+    </dsb-input-atom>
+    @if (config.hasError && config.errorText) {
+      <div class="text-danger small mt-1 dsb-form-field-error" [id]="config.idInput + '-error'">
+        {{ config.errorText }}
+      </div>
+    } @else if (config.helperText) {
+      <div class="form-text text-muted small mt-1 dsb-form-field-helper" [id]="config.idInput + '-help'">
+        {{ config.helperText }}
+      </div>
+    }
+  }
+</div>
